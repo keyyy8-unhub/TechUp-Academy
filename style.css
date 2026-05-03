@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', system-ui, -apple-system, 'Sagoe UI', Roboto, sans-serif;
-    background: linear-gradient(45deg, #6B1E23 0%, #2C0F12 100%);
+    background: linear-gradient(45deg, #6e2e35 0%, #2C0F12 100%);
     color: #ffffff;
     line-height: 1.6;
     padding: 2rem 1rem;
@@ -47,7 +47,7 @@ header img:hover {
 header h1 {
     font-size: 2.2rem;
     font-weight: 600;
-    background: linear-gradient(120deg, #6B1E23, #6B1E23);
+    background: linear-gradient(120deg, #ffffff, #f5d3d7);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -60,7 +60,108 @@ header p {
     font-weight: 500;
 }
 
+section {
+    background: #2C0F12;
+    border-radius: 32px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    border: 1px solid #2C0F12;
+}
 
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #cbdde9;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid #6B1E23;
+    display: inline-block;
+    color: #ffffff;
+}
+
+section p {
+    margin-top: 0.7rem;
+    color: #ffffff;
+}
+
+section u1 {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+section ul li {
+    background: #6B1E23;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    color: #2C0F12;
+    border: 1px solid #cbdde9;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+section ul li:hover {
+    background: #6B1E23;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 1px solid #cbdde9;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+section:last-of-type p {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+section a {
+    color: #f5d3d7;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+section a:hover {
+    border-bottom-color: #f5d3d7;
+    color: #6B1E23;
+}
+
+section:last-of-type p:first-of-type::before {
+    content: "📩";
+    font-size: 1.2rem;
+}
+
+section:last-of-type p:last-of-type::before {
+    content: "🐙";
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    font-size: 0.9rem;
+    color: #2C0F12;
+    border: 1px solid rgba(255, 225, 255, 0.6);
+}
 
 @media (max-width: 640px) {
     body {padding: 1rem;}
@@ -74,4 +175,15 @@ header p {
         width: 100px;
         height: 100px;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    margin: 1rem 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #cbdde9, transparent);
 }
