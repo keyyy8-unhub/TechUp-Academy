@@ -1,3 +1,9 @@
+:root {
+    --bg-color: linear-gradient(135deg, #6e2e35 0%, #2C0F12 100%);
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.7);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +12,15 @@
 
 body {
     font-family: 'Poppins', system-ui, -apple-system, 'Sagoe UI', Roboto, sans-serif;
-    background: linear-gradient(45deg, #6e2e35 0%, #2C0F12 100%);
-    color: #ffffff;
+    background: var(--bg-color);
+    color: var(var(--text-color));
     line-height: 1.6;
     padding: 2rem 1rem;
+}
+body.dark-theme {
+    --bg-color: linear-gradient(135deg, #200a0c 0%, #2C0F12 100%);
+    --text-color: #ffffff;
+    --card-bg: rgba(30, 41, 50, 0.6);
 }
 
 .container {
@@ -186,4 +197,21 @@ hr {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #cbdde9, transparent);
+}
+
+.floating-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    background: #6e2e35;
+    color: #000;
+    font-weight: bold;
+    transition: all.3s ease;
+}
+
+.floating-btn:hover {
+    background: #2C0F12;
+    color: #fff;
 }
